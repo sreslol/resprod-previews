@@ -30,3 +30,6 @@ After a minute, verify `https://preview.resprodclearview.app/<slug>/`.
 A hard refresh may be needed.
 
 Repo: https://github.com/sreslol/resprod-previews
+
+## Teardown (temporary)
+When previews stop using this domain: delete the Cloudflare DNS record `preview` CNAME -> sreslol.github.io (zone resprodclearview.app, record id 72e1ccedd4a29b2c5d0d14a91603e8d7), and clear the custom domain in this repo's Pages settings.
