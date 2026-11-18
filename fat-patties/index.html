@@ -118,9 +118,9 @@
 <section class="section section-photos" id="photos" aria-labelledby="photos-heading">
       <div class="wrap">
         <h2 id="photos-heading">Photos</h2>
-        <!-- Gallery shows the first 5 photos; the rest open with the "See more photos" button. Add new photos as more <li> tiles. -->
+        <!-- Gallery shows the first 8 photos; the rest open with the "See more photos" button. Add new photos as more <li> tiles. -->
         <ul class="photo-grid" id="photo-grid">
-          <li class="photo-tile feature">
+          <li class="photo-tile">
             <img src="images/burger-onion-strings.jpg" alt="Burger with onion strings, melted cheese, bacon, and sauce" width="986" height="1200">
           </li>
           <li class="photo-tile">
@@ -523,7 +523,7 @@
       var grid = document.getElementById("photo-grid");
       var btn = document.querySelector(".photo-more");
       if (!grid || !btn) return;
-      var SHOW = 5;
+      var SHOW = 8;
       var total = grid.children.length;
       if (total <= SHOW) return;
       grid.classList.add("is-collapsed");
