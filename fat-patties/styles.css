@@ -664,6 +664,9 @@ html:not(.js) .brand img {
   aspect-ratio: 1 / 1;
   object-fit: cover;
 }
+.photo-tile.feature { grid-column: span 2; }
+.photo-grid.is-collapsed .photo-tile:nth-child(n+6) { display: none; }
+.photo-more-wrap { text-align: center; margin-top: 1.25rem; }
 
 /* ----- Location ----- */
 
@@ -934,8 +937,6 @@ html:not(.js) .brand img {
     grid-row: span 2;
   }
   .photo-tile.feature img { aspect-ratio: 1 / 1; }
-  .photo-tile:last-child { grid-column: span 4; }
-  .photo-tile:last-child img { aspect-ratio: 2 / 1; object-position: center; }
 
   .location-grid {
     grid-template-columns: minmax(14rem, 0.7fr) 1.3fr;

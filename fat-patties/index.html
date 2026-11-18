@@ -118,50 +118,54 @@
 <section class="section section-photos" id="photos" aria-labelledby="photos-heading">
       <div class="wrap">
         <h2 id="photos-heading">Photos</h2>
-        <ul class="photo-grid">
+        <!-- Gallery shows the first 5 photos; the rest open with the "See more photos" button. Add new photos as more <li> tiles. -->
+        <ul class="photo-grid" id="photo-grid">
           <li class="photo-tile feature">
             <img src="images/burger-onion-strings.jpg" alt="Burger with onion strings, melted cheese, bacon, and sauce" width="986" height="1200">
           </li>
           <li class="photo-tile">
-            <img src="images/burger-fries.jpg" alt="Cheeseburger with a basket of french fries" width="1200" height="1200">
+            <img loading="lazy" src="images/burger-fries.jpg" alt="Cheeseburger with a basket of french fries" width="1200" height="1200">
           </li>
           <li class="photo-tile">
-            <img src="images/burger-onion-strings-2.jpg" alt="Burger with cheddar, bacon, onion strings, and fries" width="1200" height="1200">
+            <img loading="lazy" src="images/burger-onion-strings-2.jpg" alt="Burger with cheddar, bacon, onion strings, and fries" width="1200" height="1200">
           </li>
           <li class="photo-tile">
-            <img src="images/burger-fried-egg.jpg" alt="Burger topped with a fried egg, served with onion rings" width="1067" height="1200">
+            <img loading="lazy" src="images/burger-fried-egg.jpg" alt="Burger topped with a fried egg, served with onion rings" width="1067" height="1200">
           </li>
           <li class="photo-tile">
-            <img src="images/burger-mushroom.jpg" alt="Burger with mushrooms, bacon, melted cheese, and onion rings" width="976" height="1200">
+            <img loading="lazy" src="images/burger-mushroom.jpg" alt="Burger with mushrooms, bacon, melted cheese, and onion rings" width="976" height="1200">
           </li>
           <li class="photo-tile">
-            <img src="images/chicken-sandwich.jpg" alt="Crispy chicken sandwich with cheese, onion strings, and sauce" width="1047" height="1200">
+            <img loading="lazy" src="images/chicken-sandwich.jpg" alt="Crispy chicken sandwich with cheese, onion strings, and sauce" width="1047" height="1200">
           </li>
           <li class="photo-tile">
-            <img src="images/burger-egg-rings.jpg" alt="Burger with a fried egg and a basket of onion rings" width="1200" height="1200">
+            <img loading="lazy" src="images/burger-egg-rings.jpg" alt="Burger with a fried egg and a basket of onion rings" width="1200" height="1200">
           </li>
           <li class="photo-tile">
-            <img src="images/loaded-fries.jpg" alt="French fries topped with cheese, bacon, and a white sauce" width="1200" height="1200">
+            <img loading="lazy" src="images/loaded-fries.jpg" alt="French fries topped with cheese, bacon, and a white sauce" width="1200" height="1200">
           </li>
           <li class="photo-tile">
-            <img src="images/quesadilla.jpg" alt="Quesadilla wedges with chicken, served with lettuce and tomato" width="1200" height="1200">
+            <img loading="lazy" src="images/quesadilla.jpg" alt="Quesadilla wedges with chicken, served with lettuce and tomato" width="1200" height="1200">
           </li>
           <li class="photo-tile">
-            <img src="images/salad.jpg" alt="Salad with greens, cucumber, red onion, blue cheese, and sauced chicken" width="1200" height="1200">
+            <img loading="lazy" src="images/salad.jpg" alt="Salad with greens, cucumber, red onion, blue cheese, and sauced chicken" width="1200" height="1200">
           </li>
           <li class="photo-tile">
-            <img src="images/pizza.jpg" alt="Pizza with melted cheese and meat toppings" width="1200" height="1200">
+            <img loading="lazy" src="images/pizza.jpg" alt="Pizza with melted cheese and meat toppings" width="1200" height="1200">
           </li>
           <li class="photo-tile">
-            <img src="images/wings-seasoned.jpg" alt="Basket of seasoned chicken wings with dipping sauce and celery" width="1200" height="1200">
+            <img loading="lazy" src="images/wings-seasoned.jpg" alt="Basket of seasoned chicken wings with dipping sauce and celery" width="1200" height="1200">
           </li>
           <li class="photo-tile">
-            <img src="images/wings-sauced.jpg" alt="Basket of sauced chicken wings with celery and dipping sauce" width="1200" height="1200">
+            <img loading="lazy" src="images/wings-sauced.jpg" alt="Basket of sauced chicken wings with celery and dipping sauce" width="1200" height="1200">
           </li>
           <li class="photo-tile">
-            <img src="images/wings-grated-cheese.jpg" alt="Chicken wings topped with grated cheese, served with celery and dipping sauce" width="1200" height="1200">
+            <img loading="lazy" src="images/wings-grated-cheese.jpg" alt="Chicken wings topped with grated cheese, served with celery and dipping sauce" width="1200" height="1200">
           </li>
         </ul>
+        <div class="photo-more-wrap">
+          <button type="button" class="btn btn-orange photo-more" aria-controls="photo-grid" aria-expanded="false" hidden>See more photos</button>
+        </div>
       </div>
     </section>
 
@@ -514,6 +518,28 @@
       };
       onScroll();
       window.addEventListener("scroll", onScroll, { passive: true });
+    })();
+    (function () {
+      var grid = document.getElementById("photo-grid");
+      var btn = document.querySelector(".photo-more");
+      if (!grid || !btn) return;
+      var SHOW = 5;
+      var total = grid.children.length;
+      if (total <= SHOW) return;
+      grid.classList.add("is-collapsed");
+      btn.hidden = false;
+      var label = function () {
+        var open = !grid.classList.contains("is-collapsed");
+        btn.textContent = open ? "Show fewer photos" : "See more photos (" + (total - SHOW) + ")";
+        btn.setAttribute("aria-expanded", open ? "true" : "false");
+      };
+      label();
+      btn.addEventListener("click", function () {
+        var opening = grid.classList.contains("is-collapsed");
+        grid.classList.toggle("is-collapsed");
+        label();
+        if (!opening) document.getElementById("photos").scrollIntoView({ behavior: "smooth" });
+      });
     })();
   </script>
 </body>
