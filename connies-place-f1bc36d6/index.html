@@ -47,9 +47,16 @@
 
   <main id="main">
 
-    <!-- HERO: compact split on desktop; no full-viewport photo, no stock hero. -->
-    <section class="hero" aria-labelledby="hero-title">
-      <div class="wrap hero-grid">
+    <!-- HERO: storefront sample as a full-width background, text overlaid.
+         Compact on desktop (about 55–65vh, min 420px) — not a full-viewport photo.
+         SWAP-PHOTOS: replace images/sample-storefront.jpg (also used in the Visit storefront slot),
+         update alt, and remove the photo-sample class plus the Sample photo tag. -->
+    <section class="hero photo-sample" data-slot="storefront" aria-labelledby="hero-title">
+      <img class="hero-bg" src="images/sample-storefront.jpg" width="1600" height="1578"
+           alt="Sample photo of a small-town shop entrance, used as a placeholder storefront" fetchpriority="high">
+      <div class="hero-shade" aria-hidden="true"></div>
+      <span class="sample-tag">Sample photo</span>
+      <div class="wrap hero-inner">
         <div class="hero-text">
           <p class="kicker">Hair salon · Johnson City, NY</p>
           <h1 id="hero-title">Connie’s Place <span>Family Hair Care</span></h1>
@@ -57,7 +64,7 @@
           <p class="hero-fun">Fueled by passion..and hairspray</p>
           <div class="hero-actions">
             <a class="btn btn-solid" href="tel:+16077980394">Call (607) 798-0394</a>
-            <a class="btn btn-outline-dark" href="https://www.google.com/maps/dir/?api=1&amp;destination=Connie%27s+Place+Family+Hair+Care%2C+286+Main+St%2C+Johnson+City%2C+NY+13790" target="_blank" rel="noopener">Get directions</a>
+            <a class="btn btn-outline" href="https://www.google.com/maps/dir/?api=1&amp;destination=Connie%27s+Place+Family+Hair+Care%2C+286+Main+St%2C+Johnson+City%2C+NY+13790" target="_blank" rel="noopener">Get directions</a>
           </div>
           <p class="hero-reviews">
             <span class="stars" aria-hidden="true">★★★★★</span>
@@ -67,27 +74,17 @@
             <a href="https://www.facebook.com/ConniesPlaceHairCare/" target="_blank" rel="noopener">on Facebook</a>.
           </p>
         </div>
-        <div class="hero-visual" aria-hidden="false">
-          <figure class="hero-frame hero-frame-main">
-            <img src="images/hair-copper-wavy.jpg" width="1440" height="1440"
-                 alt="Copper wavy hair, finished color work from Connie’s Place" fetchpriority="high">
-          </figure>
-          <figure class="hero-frame hero-frame-accent">
-            <img src="images/hair-silver-blonde-waves.jpg" width="1286" height="1600"
-                 alt="Silver-blonde wavy hair, finished color work from Connie’s Place">
-          </figure>
-        </div>
-      </div>
-      <div class="facts" aria-label="Good to know">
-        <ul class="wrap facts-row">
-          <li><span class="fact-k">Address</span><span class="fact-v">286 Main St, Johnson City</span></li>
-          <li><span class="fact-k">Phone</span><a class="fact-v" href="tel:+16077980394">(607) 798-0394</a></li>
-          <li><span class="fact-k">Hours</span><span class="fact-v">Please call <span class="ph">Placeholder</span></span></li>
-          <li><span class="fact-k">Welcome</span><span class="fact-v">All ages</span></li>
-        </ul>
-        <p class="wrap facts-note">Closures and holiday hours are posted on our <a href="https://www.facebook.com/ConniesPlaceHairCare/" target="_blank" rel="noopener">Facebook</a>.</p>
       </div>
     </section>
+    <div class="facts" aria-label="Good to know">
+      <ul class="wrap facts-row">
+        <li><span class="fact-k">Address</span><span class="fact-v">286 Main St, Johnson City</span></li>
+        <li><span class="fact-k">Phone</span><a class="fact-v" href="tel:+16077980394">(607) 798-0394</a></li>
+        <li><span class="fact-k">Hours</span><span class="fact-v">Please call <span class="ph">Placeholder</span></span></li>
+        <li><span class="fact-k">Welcome</span><span class="fact-v">All ages</span></li>
+      </ul>
+      <p class="wrap facts-note">Closures and holiday hours are posted on our <a href="https://www.facebook.com/ConniesPlaceHairCare/" target="_blank" rel="noopener">Facebook</a>.</p>
+    </div>
 
     <!-- SERVICES -->
     <section class="section services" id="services" aria-labelledby="services-title">
@@ -226,9 +223,10 @@
     </section>
 
     <!-- VISIT THE SALON: SWAP-PHOTOS
+         The storefront file is shared with the hero (data-slot="storefront").
          Replace images/sample-storefront.jpg and images/sample-interior.jpg with real shots
-         (e.g. images/storefront.jpg, images/interior.jpg), update src/alt, and delete the
-         .photo-sample class + .sample-tag span on each figure. -->
+         (e.g. images/storefront.jpg, images/interior.jpg), update src/alt on the hero and
+         these figures, and delete the .photo-sample class + .sample-tag span. -->
     <section class="section place" id="place" aria-labelledby="place-title">
       <div class="wrap">
         <p class="eyebrow">Visit the salon</p>
@@ -236,8 +234,8 @@
         <p class="section-lead">Photos of the storefront and salon are on the way. <span class="ph">Placeholder</span></p>
         <div class="place-grid">
           <figure class="place-photo photo-sample" data-slot="storefront">
-            <img src="images/sample-storefront.jpg" width="1600" height="1067" loading="lazy"
-                 alt="Placeholder illustration of a storefront; the salon’s real storefront photo goes here">
+            <img src="images/sample-storefront.jpg" width="1600" height="1578" loading="lazy"
+                 alt="Sample photo of a small-town shop entrance, used as a placeholder storefront">
             <span class="sample-tag">Sample photo</span>
             <figcaption>Storefront · 286 Main St</figcaption>
           </figure>
