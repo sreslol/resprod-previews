@@ -356,6 +356,9 @@ address { font-style: normal; }
 }
 
 /* Hours + visit */
+.hours { background: var(--black); }
+.hours .hours-card,
+.visit .visit-card { max-width: 42rem; }
 .visit { background: var(--black); }
 .visit-split { display: grid; gap: 1.5rem; }
 .hours-card, .visit-card {

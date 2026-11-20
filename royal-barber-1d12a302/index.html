@@ -18,7 +18,7 @@
       .menu-toggle, .mobile-menu { display: none !important; }
     }
   </style>
-  <link rel="stylesheet" href="styles.css?v=8">
+  <link rel="stylesheet" href="styles.css?v=9">
 </head>
 <body id="top">
 
@@ -45,11 +45,11 @@
       </a>
       <nav class="nav" aria-label="Primary">
         <a href="#services">Services</a>
-        <a href="#gallery">Gallery</a>
-        <a href="#cuts">Cuts</a>
         <a href="#hours">Hours</a>
-        <a href="#visit">Visit</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#work">Work</a>
         <a href="#reviews">Reviews</a>
+        <a href="#visit">Visit</a>
       </nav>
       <a class="btn btn-call header-call" href="tel:+16077943121">Call</a>
       <button type="button" class="menu-toggle" id="menu-toggle"
@@ -62,11 +62,11 @@
     <div class="mobile-menu" id="mobile-menu" hidden>
       <nav class="mobile-nav" aria-label="Mobile">
         <a href="#services">Services</a>
-        <a href="#gallery">Gallery</a>
-        <a href="#cuts">Cuts</a>
         <a href="#hours">Hours</a>
-        <a href="#visit">Visit</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#work">Work</a>
         <a href="#reviews">Reviews</a>
+        <a href="#visit">Visit</a>
         <a class="btn btn-call mobile-nav-call" href="tel:+16077943121">Call</a>
       </nav>
     </div>
@@ -182,6 +182,27 @@
       </div>
     </section>
 
+    <section class="section hours" id="hours" aria-labelledby="hours-title">
+      <div class="wrap">
+        <!-- EDIT-HOURS: change hours in this block only. -->
+        <div class="hours-card">
+          <p class="eyebrow">Plan your visit</p>
+          <h2 id="hours-title">Hours</h2>
+          <dl class="hours-list">
+            <div data-day="1"><dt>Monday</dt><dd>Closed</dd></div>
+            <div data-day="2"><dt>Tuesday</dt><dd>10:00 AM – 6:00 PM</dd></div>
+            <div data-day="3"><dt>Wednesday</dt><dd>10:00 AM – 6:00 PM</dd></div>
+            <div data-day="4"><dt>Thursday</dt><dd>10:00 AM – 6:00 PM</dd></div>
+            <div data-day="5"><dt>Friday</dt><dd>10:00 AM – 6:00 PM</dd></div>
+            <div data-day="6"><dt>Saturday</dt><dd>10:00 AM – 6:00 PM</dd></div>
+            <div data-day="0"><dt>Sunday</dt><dd>10:00 AM – 5:00 PM</dd></div>
+          </dl>
+          <p class="hours-note"><span class="ph">Hours to be confirmed</span></p>
+          <p class="cash-note"><strong>Cash only.</strong> Reviewers mention an ATM at a nearby deli.</p>
+        </div>
+      </div>
+    </section>
+
     <section class="section gallery" id="gallery" aria-labelledby="gallery-title">
       <div class="wrap">
         <p class="eyebrow">Inside the shop</p>
@@ -214,12 +235,11 @@
       </div>
     </section>
 
-
-    <section class="section cuts" id="cuts" aria-labelledby="cuts-title">
+    <section class="section cuts" id="work" aria-labelledby="work-title">
       <div class="wrap">
-        <p class="eyebrow">The work</p>
-        <h2 id="cuts-title">Recent cuts</h2>
-        <p class="section-lead">A few recent haircuts from the shop.</p>
+        <p class="eyebrow">From the chair</p>
+        <h2 id="work-title">His work</h2>
+        <p class="section-lead">Haircuts from the shop.</p>
         <ul class="cuts-grid">
           <li class="cuts-featured">
             <figure>
@@ -257,51 +277,6 @@
             </figure>
           </li>
         </ul>
-      </div>
-    </section>
-
-    <section class="section visit" id="visit" aria-labelledby="visit-title">
-      <div class="wrap visit-split">
-        <!-- EDIT-HOURS: change hours in this block only. -->
-        <div class="hours-card" id="hours">
-          <p class="eyebrow">Plan your visit</p>
-          <h2>Hours</h2>
-          <dl class="hours-list">
-            <div data-day="1"><dt>Monday</dt><dd>Closed</dd></div>
-            <div data-day="2"><dt>Tuesday</dt><dd>10:00 AM – 6:00 PM</dd></div>
-            <div data-day="3"><dt>Wednesday</dt><dd>10:00 AM – 6:00 PM</dd></div>
-            <div data-day="4"><dt>Thursday</dt><dd>10:00 AM – 6:00 PM</dd></div>
-            <div data-day="5"><dt>Friday</dt><dd>10:00 AM – 6:00 PM</dd></div>
-            <div data-day="6"><dt>Saturday</dt><dd>10:00 AM – 6:00 PM</dd></div>
-            <div data-day="0"><dt>Sunday</dt><dd>10:00 AM – 5:00 PM</dd></div>
-          </dl>
-          <p class="hours-note"><span class="ph">Hours to be confirmed</span></p>
-          <p class="cash-note"><strong>Cash only.</strong> Reviewers mention an ATM at a nearby deli.</p>
-        </div>
-
-        <div class="visit-card">
-          <p class="eyebrow">Find us</p>
-          <h2 id="visit-title">Visit the shop</h2>
-          <address>
-            205A Main St<br>
-            Johnson City, NY 13790
-          </address>
-          <div class="visit-actions">
-            <a class="btn btn-call" href="tel:+16077943121">Call (607) 794-3121</a>
-            <a class="btn btn-outline" href="https://www.google.com/maps/dir/?api=1&amp;destination=Royal+Barber+Shop,+205A+Main+St,+Johnson+City,+NY+13790" target="_blank" rel="noopener">Get directions</a>
-          </div>
-          <p class="reviews-line">See our reviews on <a href="https://www.google.com/maps/place/Royal+Barber+Shop/@42.1147302,-75.9537895,17z/data=!4m8!3m7!1s0x89daee5607c13783:0x47861ee422aa5090!8m2!3d42.1147302!4d-75.9537895!9m1!1b1!16s%2Fg%2F11gf9gk96k" target="_blank" rel="noopener">Google</a>.</p>
-          <figure class="visit-photo">
-            <img src="images/storefront-window.jpg" width="1200" height="1600"
-                 alt="The 205A storefront window and door of Royal Barber Shop on Main Street" loading="lazy">
-          </figure>
-          <div class="map-wrap">
-            <iframe class="map"
-              title="Map of Royal Barber Shop at 205A Main St, Johnson City, NY"
-              src="https://www.google.com/maps?q=Royal+Barber+Shop,+205A+Main+St,+Johnson+City,+NY+13790&amp;output=embed"
-              loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
-          </div>
-        </div>
       </div>
     </section>
 
@@ -414,6 +389,35 @@
         </div>
       </div>
     </section>
+
+    <section class="section visit" id="visit" aria-labelledby="visit-title">
+      <div class="wrap">
+        <div class="visit-card">
+          <p class="eyebrow">Find us</p>
+          <h2 id="visit-title">Visit the shop</h2>
+          <address>
+            205A Main St<br>
+            Johnson City, NY 13790
+          </address>
+          <div class="visit-actions">
+            <a class="btn btn-call" href="tel:+16077943121">Call (607) 794-3121</a>
+            <a class="btn btn-outline" href="https://www.google.com/maps/dir/?api=1&amp;destination=Royal+Barber+Shop,+205A+Main+St,+Johnson+City,+NY+13790" target="_blank" rel="noopener">Get directions</a>
+          </div>
+          <p class="reviews-line">See our reviews on <a href="https://www.google.com/maps/place/Royal+Barber+Shop/@42.1147302,-75.9537895,17z/data=!4m8!3m7!1s0x89daee5607c13783:0x47861ee422aa5090!8m2!3d42.1147302!4d-75.9537895!9m1!1b1!16s%2Fg%2F11gf9gk96k" target="_blank" rel="noopener">Google</a>.</p>
+          <figure class="visit-photo">
+            <img src="images/storefront-window.jpg" width="1200" height="1600"
+                 alt="The 205A storefront window and door of Royal Barber Shop on Main Street" loading="lazy">
+          </figure>
+          <div class="map-wrap">
+            <iframe class="map"
+              title="Map of Royal Barber Shop at 205A Main St, Johnson City, NY"
+              src="https://www.google.com/maps?q=Royal+Barber+Shop,+205A+Main+St,+Johnson+City,+NY+13790&amp;output=embed"
+              loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
 
   </main>
 
