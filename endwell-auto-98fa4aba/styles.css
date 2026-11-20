@@ -89,7 +89,7 @@ p { margin: 0 0 1rem; }
 /* Header */
 .site-header {
   position: sticky; top: 0; z-index: 100;
-  background: rgba(255,255,255,0.96); backdrop-filter: saturate(1.4) blur(8px);
+  background: #ffffff;
   border-bottom: 1px solid var(--line);
 }
 .header-inner { display: flex; align-items: center; gap: 1rem; min-height: 4rem; }
@@ -102,7 +102,7 @@ p { margin: 0 0 1rem; }
 .wordmark { display: flex; flex-direction: column; line-height: 1; }
 .wordmark-name { font-size: 1.3rem; font-weight: 800; letter-spacing: 0.02em; text-transform: uppercase; }
 .wordmark-sub { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: var(--accent); margin-top: 0.2rem; }
-.brand-logo { height: 3rem; width: auto; }
+.brand-logo { height: 3.1rem; width: auto; }
 .nav { display: none; gap: 0.25rem; margin-left: auto; }
 .nav a {
   color: var(--navy-deep); text-decoration: none; font-weight: 600; font-size: 0.95rem;
@@ -331,3 +331,12 @@ p { margin: 0 0 1rem; }
   margin-bottom: 0.3rem; font-size: 0.72rem; font-weight: 700;
   letter-spacing: 0.08em; text-transform: uppercase; color: #ffb877;
 }
+
+/* Card logo (white background) — header is pure white; footer uses a white chip */
+@media (min-width: 900px) { .brand-logo { height: 3.9rem; } }
+.footer-logo {
+  display: inline-block; background: #fff; border-radius: 10px;
+  padding: 0.5rem 0.7rem; margin-bottom: 0.9rem;
+}
+.footer-logo img { height: 3rem; width: auto; }
+.footer-tagline { font-style: italic; color: #d6dee7; margin-top: -0.6rem; }
