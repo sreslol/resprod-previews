@@ -10,7 +10,15 @@
   <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
   <link rel="preload" href="fonts/cinzel-700.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="fonts/barlow-400.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Critical: hide the mobile menu even if a cached styles.css is stale.
+       Shared breakpoint with styles.css and the menu script: 900px. */
+    .mobile-menu[hidden] { display: none !important; }
+    @media (min-width: 900px) {
+      .menu-toggle, .mobile-menu { display: none !important; }
+    }
+  </style>
+  <link rel="stylesheet" href="styles.css?v=8">
 </head>
 <body id="top">
 
@@ -491,6 +499,10 @@
 
       toggle.addEventListener("click", function (e) {
         e.stopPropagation();
+        if (desktop.matches) {
+          closeMenu(false);
+          return;
+        }
         setOpen(!isOpen());
       });
 
@@ -513,6 +525,7 @@
       }
       if (desktop.addEventListener) desktop.addEventListener("change", onDesktopChange);
       else if (desktop.addListener) desktop.addListener(onDesktopChange);
+      onDesktopChange();
     })();
   </script>
 </body>

@@ -197,6 +197,7 @@ address { font-style: normal; }
 }
 .mobile-nav a:not(.btn):hover { color: var(--gold-hi); }
 .mobile-nav-call { margin-top: 1rem; width: 100%; }
+.mobile-menu[hidden] { display: none !important; }
 
 /* Hero */
 .hero { position: relative; isolation: isolate; min-height: min(88vh, 42rem); display: grid; align-items: end; overflow: hidden; }
@@ -426,10 +427,11 @@ address { font-style: normal; }
 }
 
 @media (min-width: 900px) {
+  /* Shared breakpoint (900px): desktop nav on, hamburger and panel off. */
   body { padding-bottom: 0; }
   .action-bar { display: none; }
   .nav { display: flex; }
-  .menu-toggle, .mobile-menu { display: none; }
+  .menu-toggle, .mobile-menu { display: none !important; }
   .header-inner { min-height: 4.75rem; }
   .brand-mark { height: 2.7rem; }
   .brand-name { font-size: 1.55rem; }
