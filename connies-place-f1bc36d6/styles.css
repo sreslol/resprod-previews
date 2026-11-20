@@ -338,10 +338,6 @@ a.fact-v:hover { color: var(--rose); }
 .mb-call { flex: 0 0 38%; color: #fff; border: 2px solid rgba(255, 255, 255, 0.45); }
 .mb-dir { flex: 1; background: var(--rose); color: #fff; }
 
-@media (max-width: 959px) {
-  .menu-toggle { display: inline-flex; }
-  .site-header.is-open .mobile-menu:not([hidden]) { display: block; }
-}
 .mobile-menu[hidden] { display: none !important; }
 @media (max-width: 639px) {
   .draft-banner { font-size: 0.75rem; padding: 0.35rem 0.7rem; }
@@ -381,8 +377,6 @@ a.fact-v:hover { color: var(--rose); }
   .mobile-bar { display: none; }
   .header-inner { min-height: 3.65rem; }
   .nav { display: flex; }
-  .menu-toggle,
-  .mobile-menu { display: none !important; }
   .header-call { font-size: 0.88rem; padding: 0.45rem 1rem; }
   .hero {
     min-height: 26.25rem; /* 420px */
@@ -400,4 +394,16 @@ a.fact-v:hover { color: var(--rose); }
   .g-wide { grid-column: span 1; }
   .visit-split { grid-template-columns: 1fr 1fr; gap: 1.15rem; margin-bottom: 1rem; }
   .map-frame { aspect-ratio: 21/7; }
+}
+
+/* Paired at 960px: primary nav on desktop, hamburger + panel only below it.
+   These rules come last so they are not overridden by earlier display values. */
+@media (max-width: 959px) {
+  .menu-toggle { display: inline-flex; }
+  .site-header.is-open .mobile-menu:not([hidden]) { display: block; }
+}
+@media (min-width: 960px) {
+  .nav { display: flex; }
+  .menu-toggle,
+  .mobile-menu { display: none !important; }
 }
