@@ -5,7 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex, nofollow">
   <title>Endwell Auto Service | Auto Repair &amp; NYS Inspections | Endwell, NY</title>
-  <meta name="description" content="Endwell Auto Service LLC at 3101 Watson Blvd, Endwell, NY 13760. Auto repair and official NYS inspections. Call (607) 748-3522.">
+  <meta name="description" content="Endwell Auto Service LLC at 3101 Watson Blvd, Endwell, NY 13760. Registered NYS repair shop and official NYS inspection station. Call (607) 748-3522.">
+  <meta name="theme-color" content="#0f2236">
   <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -23,6 +24,10 @@
       Sunday           Closed
     After editing the #hours section, you are done — hours are
     not repeated anywhere else.
+
+    REVIEWS: every quote in #reviews is copied word for word from
+    a public Google review (trimmed only with "…"). Sources and
+    retrieval date are in README.md. Never edit the wording.
     ============================================================
   -->
 
@@ -39,6 +44,7 @@
         <!-- PHOTO SWAP (optional logo): replace the wordmark span with
              <img class="brand-logo" src="images/logo-endwell-auto.png" width="400" height="120" alt="Endwell Auto Service">
         -->
+        <span class="brand-mark" aria-hidden="true">EA</span>
         <span class="wordmark">
           <span class="wordmark-name">Endwell</span>
           <span class="wordmark-sub">Auto Service</span>
@@ -46,165 +52,184 @@
       </a>
       <nav class="nav" aria-label="Primary">
         <a href="#services">Services</a>
-        <a href="#visit">Visit</a>
-        <a href="#about">About</a>
+        <a href="#reviews">Reviews</a>
         <a href="#photos">Photos</a>
+        <a href="#visit">Visit</a>
         <a href="#hours">Hours</a>
-        <a href="#contact">Contact</a>
       </nav>
       <a class="btn btn-accent header-call" href="tel:+16077483522">
-        <span class="call-short">Call Now</span>
-        <span class="call-full">Call (607) 748-3522</span>
+        <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg>
+        <span class="call-short">Call</span>
+        <span class="call-full">(607) 748-3522</span>
       </a>
     </div>
   </header>
 
   <main id="main">
 
+    <!-- HERO -->
     <section class="hero" aria-labelledby="hero-title">
-      <div class="wrap hero-split">
-        <div class="hero-copy">
-          <p class="eyebrow">Endwell, New York</p>
-          <h1 id="hero-title">Auto Repair &amp; NYS Inspections</h1>
-          <p class="hero-tagline">Endwell Auto Service LLC is a registered NYS motor vehicle repair shop and official inspection station on Watson Boulevard.</p>
-          <p class="hero-meta">
-            3101 Watson Blvd, Endwell, NY 13760
-            <span class="dot" aria-hidden="true">·</span>
-            <span class="rating"><span class="stars" aria-hidden="true">★★★★★</span> 4.6 stars from 58 Google reviews</span>
-          </p>
-          <div class="hero-actions">
-            <a class="btn btn-accent btn-lg" href="tel:+16077483522">Call (607) 748-3522</a>
-            <a class="btn btn-ghost btn-lg" href="#visit">Hours &amp; directions</a>
-          </div>
+      <!-- PHOTO SWAP: replace with a real storefront / bay photo, e.g.
+           images/hero-shop-front.jpg, and remove the Sample photo tag. -->
+      <img class="hero-bg" src="images/sample-bay-lift.jpg" width="1600" height="961" alt="" aria-hidden="true">
+      <span class="sample-tag hero-sample">Sample photo</span>
+      <div class="wrap hero-inner">
+        <a class="rating-badge" href="https://www.google.com/maps/search/?api=1&query=Endwell+Auto+Service+3101+Watson+Blvd+Endwell+NY+13760" target="_blank" rel="noopener noreferrer">
+          <span class="rating-num">4.6</span>
+          <span class="stars-meter" role="img" aria-label="4.6 out of 5 stars"><span style="width:92%"></span></span>
+          <span class="rating-src">58 Google reviews</span>
+        </a>
+        <p class="eyebrow">Watson Blvd &middot; Endwell, New York</p>
+        <h1 id="hero-title">Auto repair &amp; NYS inspections <span class="accent-text">you can count on.</span></h1>
+        <p class="hero-tagline">A registered New York State repair shop and official inspection station, right here on Watson Boulevard.</p>
+        <div class="hero-actions">
+          <a class="btn btn-accent btn-lg" href="tel:+16077483522">
+            <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg>
+            Call (607) 748-3522
+          </a>
+          <a class="btn btn-light btn-lg" href="https://www.google.com/maps/dir/?api=1&destination=Endwell+Auto+Service,+3101+Watson+Blvd,+Endwell,+NY+13760" target="_blank" rel="noopener noreferrer">
+            <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>
+            Get directions
+          </a>
         </div>
-        <div class="hero-photo">
-          <!-- PHOTO SWAP: replace the sample figure with a shop photo, e.g.
-               <img src="images/hero-shop-front.jpg" width="1600" height="1067" alt="Storefront of Endwell Auto Service at 3101 Watson Blvd, Endwell">
-               and remove the Sample photo tag. About 1600px max on the long edge.
-          -->
-          <figure class="shot">
-            <img src="images/sample-bay-lift.jpg" width="1600" height="961" alt="Sample photo: a car raised on a lift in an auto repair bay">
-            <span class="sample-tag">Sample photo</span>
-          </figure>
-        </div>
+        <p class="hero-address">3101 Watson Blvd, Endwell, NY 13760</p>
       </div>
     </section>
 
-    <section class="service-band" id="services">
-      <div class="wrap band-grid">
-        <article>
-          <h2>Auto Repair</h2>
-          <p>Registered NYS Motor Vehicle Repair Shop</p>
-        </article>
-        <article>
-          <h2>Oil Changes &amp; Tires</h2>
-          <p>Listed on public directories — confirm with the shop</p>
-          <span class="ph">Placeholder – confirm</span>
-        </article>
-        <article>
-          <h2>NYS Inspections</h2>
-          <p>Official NYS Motor Vehicle Inspection Station</p>
-        </article>
-      </div>
+    <!-- TRUST STRIP -->
+    <section class="trust" aria-label="Credentials">
+      <ul class="wrap trust-list">
+        <li>
+          <svg class="trust-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 4 5v6c0 5 3.4 9.6 8 11 4.6-1.4 8-6 8-11V5l-8-3zm-1.2 14.2-3.5-3.5 1.4-1.4 2.1 2.1 4.9-4.9 1.4 1.4-6.3 6.3z"/></svg>
+          <span><strong>Registered NYS Repair Shop</strong><small>DMV facility 7092846</small></span>
+        </li>
+        <li>
+          <svg class="trust-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2zm-8.5 13.5-4-4 1.4-1.4 2.6 2.6 6.1-6.1 1.4 1.4-7.5 7.5z"/></svg>
+          <span><strong>Official NYS Inspection Station</strong><small>Licensed by the NYS DMV</small></span>
+        </li>
+        <li>
+          <svg class="trust-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 17.3 6.2 3.7-1.6-7 5.4-4.7-7.1-.6L12 2 9.1 8.7 2 9.3l5.4 4.7-1.6 7z"/></svg>
+          <span><strong>4.6 stars on Google</strong><small>From 58 reviews</small></span>
+        </li>
+      </ul>
     </section>
 
-    <section class="visit" id="visit">
-      <div class="wrap visit-split">
-        <div class="visit-copy">
-          <h2>Come and visit us</h2>
-          <p>
-            Endwell Auto Service LLC is at 3101 Watson Blvd, Endwell, NY 13760.
-            We are a <strong>Registered NYS Motor Vehicle Repair Shop</strong>
-            and an <strong>official NYS Motor Vehicle Inspection Station</strong>
-            (DMV facility 7092846).
-          </p>
-          <div class="hero-actions">
-            <a class="btn btn-accent" href="tel:+16077483522">Call (607) 748-3522</a>
-            <a class="btn btn-dark" href="https://www.google.com/maps/dir/?api=1&destination=Endwell+Auto+Service,+3101+Watson+Blvd,+Endwell,+NY+13760" target="_blank" rel="noopener noreferrer">Get directions</a>
-          </div>
-        </div>
-        <div class="visit-photo">
-          <!-- PHOTO SWAP: same file as the hero, or a second angle of the shop.
-               Remove the Sample photo tag when a real photo is in place.
-          -->
-          <figure class="shot">
-            <img src="images/sample-bay-lift.jpg" width="1600" height="961" alt="Sample photo: a car raised on a lift in an auto repair bay">
-            <span class="sample-tag">Sample photo</span>
-          </figure>
-        </div>
-      </div>
-      <div class="wrap map-wrap">
-        <iframe
-          class="map"
-          title="Map of Endwell Auto Service at 3101 Watson Blvd, Endwell, NY"
-          src="https://www.google.com/maps?q=Endwell+Auto+Service,+3101+Watson+Blvd,+Endwell,+NY+13760&output=embed"
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-          allowfullscreen></iframe>
-        <p class="map-caption">3101 Watson Blvd, Endwell, NY 13760</p>
-      </div>
-    </section>
-
-    <section class="about" id="about">
+    <!-- SERVICES -->
+    <section class="services" id="services" aria-labelledby="services-title">
       <div class="wrap">
-        <h2>A registered Endwell repair shop</h2>
-        <p class="about-lead">
-          Endwell Auto Service LLC is owned by Richard L. Griswold and is listed
-          with the New York State Department of Motor Vehicles as both a repair
-          shop and an inspection station.
-        </p>
-        <ul class="feature-row">
-          <li>
-            <span class="feature-icon" aria-hidden="true">
-              <svg viewBox="0 0 48 48" width="44" height="44"><path fill="none" stroke="currentColor" stroke-width="2" d="M10 38V14l14-8 14 8v24H10z"/><path fill="none" stroke="currentColor" stroke-width="2" d="M20 38V26h8v12"/></svg>
+        <p class="kicker">What we do</p>
+        <h2 id="services-title">Services</h2>
+        <ul class="service-cards">
+          <li class="card">
+            <span class="card-ico" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M22.7 19 13.6 9.9c.9-2.3.4-5-1.5-6.9-2-2-5-2.4-7.4-1.3L9 6 6 9 1.6 4.7C.4 7.1.9 10.1 2.9 12.1c1.9 1.9 4.6 2.4 6.9 1.5l9.1 9.1c.4.4 1 .4 1.4 0l2.3-2.3c.5-.4.5-1.1.1-1.4z"/></svg>
             </span>
-            <h3>Registered NYS Motor Vehicle Repair Shop</h3>
-            <p>DMV facility 7092846</p>
+            <h3>Auto Repair</h3>
+            <p>Registered NYS Motor Vehicle Repair Shop.</p>
           </li>
-          <li>
-            <span class="feature-icon" aria-hidden="true">
-              <svg viewBox="0 0 48 48" width="44" height="44"><circle cx="24" cy="24" r="14" fill="none" stroke="currentColor" stroke-width="2"/><path fill="none" stroke="currentColor" stroke-width="2" d="M24 16v8l6 4"/></svg>
+          <li class="card">
+            <span class="card-ico" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M19 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2zm-8.5 13.5-4-4 1.4-1.4 2.6 2.6 6.1-6.1 1.4 1.4-7.5 7.5z"/></svg>
             </span>
-            <h3>NYS State Inspections</h3>
-            <p>Official NYS Motor Vehicle Inspection Station</p>
+            <h3>NYS Inspections</h3>
+            <p>Official NYS Motor Vehicle Inspection Station.</p>
           </li>
-          <li>
-            <span class="feature-icon" aria-hidden="true">
-              <svg viewBox="0 0 48 48" width="44" height="44"><path fill="none" stroke="currentColor" stroke-width="2" d="M24 8c-6.6 0-12 5.2-12 11.6 0 8.7 12 20.4 12 20.4s12-11.7 12-20.4C36 13.2 30.6 8 24 8z"/><circle cx="24" cy="19.5" r="4" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+          <li class="card card-ph">
+            <span class="card-ico" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm0 15a5 5 0 1 1 0-10 5 5 0 0 1 0 10zm0-7a2 2 0 1 0 0 4 2 2 0 0 0 0-4z"/></svg>
             </span>
-            <h3>On Watson Boulevard</h3>
-            <p>3101 Watson Blvd, Endwell, NY 13760</p>
+            <h3>Oil Changes &amp; Tires</h3>
+            <p>Listed on public directories — confirm with the shop.</p>
+            <span class="ph">Placeholder – confirm</span>
           </li>
         </ul>
       </div>
     </section>
 
-    <section class="photos" id="photos">
+    <!-- REVIEWS: verbatim Google review excerpts. Sources in README.md. -->
+    <section class="reviews" id="reviews" aria-labelledby="reviews-title">
       <div class="wrap">
-        <h2>Photos</h2>
-        <p class="section-note">
-          These are free-license sample photos so the layout can be reviewed.
-          They will be replaced with photos of the shop once we have them.
-        </p>
-        <ul class="photo-grid">
+        <div class="reviews-head">
+          <div>
+            <p class="kicker kicker-light">What customers say</p>
+            <h2 id="reviews-title">Straight from Google reviews</h2>
+          </div>
+          <div class="reviews-score">
+            <span class="score-num">4.6</span>
+            <span>
+              <span class="stars-meter stars-lg" role="img" aria-label="4.6 out of 5 stars"><span style="width:92%"></span></span>
+              <span class="score-sub">58 reviews on Google</span>
+            </span>
+          </div>
+        </div>
+
+        <blockquote class="feature-quote">
+          <p>Rich and his team truly uphold their reputation as people you can trust with your vehicle. Great work!</p>
+          <footer><span class="q-stars" aria-label="5 stars">★★★★★</span> J Noel &middot; Google review</footer>
+        </blockquote>
+
+        <ul class="quote-grid">
           <li>
+            <blockquote>
+              <span class="q-stars" aria-label="5 stars">★★★★★</span>
+              <p>“…Our car was ready the next day. I even received a follow up txt. Now that is service I like.”</p>
+              <footer>Richard V. &middot; Google review</footer>
+            </blockquote>
+          </li>
+          <li>
+            <blockquote>
+              <span class="q-stars" aria-label="5 stars">★★★★★</span>
+              <p>“…These guys got me in within 15 minutes of calling and had my car all fixed and ready to go less than two hours later…”</p>
+              <footer>Megan &middot; Google review</footer>
+            </blockquote>
+          </li>
+          <li>
+            <blockquote>
+              <span class="q-stars" aria-label="5 stars">★★★★★</span>
+              <p>“…From general fluid services to repairing weird issues on 11+ year old cars, he does it all with a smile, great knowledge, and extremely reasonable prices. …”</p>
+              <footer>Christopher V. &middot; Google review</footer>
+            </blockquote>
+          </li>
+          <li>
+            <blockquote>
+              <span class="q-stars" aria-label="5 stars">★★★★★</span>
+              <p>“Best service in the southern tier. Owner stands by all his work. …”</p>
+              <footer>Jeffrey L. &middot; Google review</footer>
+            </blockquote>
+          </li>
+        </ul>
+
+        <p class="reviews-cta">
+          <a class="btn btn-light" href="https://www.google.com/maps/search/?api=1&query=Endwell+Auto+Service+3101+Watson+Blvd+Endwell+NY+13760" target="_blank" rel="noopener noreferrer">Read all reviews on Google</a>
+        </p>
+      </div>
+    </section>
+
+    <!-- PHOTOS -->
+    <section class="photos" id="photos" aria-labelledby="photos-title">
+      <div class="wrap">
+        <p class="kicker">In the shop</p>
+        <h2 id="photos-title">Photos</h2>
+        <p class="section-note">Free-license sample photos for layout review. They'll be swapped for real photos of the shop.</p>
+        <ul class="photo-grid">
+          <li class="photo-wide">
             <!-- PHOTO SWAP: images/photo-tools.jpg (or a shop bay / workbench shot) -->
             <figure class="shot">
-              <img src="images/sample-tools.jpg" width="1600" height="705" alt="Sample photo: a socket set and ratchets on a workbench">
+              <img src="images/sample-tools.jpg" width="1600" height="705" alt="Sample photo: a socket set and ratchets on a workbench" loading="lazy">
               <span class="sample-tag">Sample photo</span>
             </figure>
           </li>
           <li>
             <!-- PHOTO SWAP: images/photo-tires.jpg -->
             <figure class="shot">
-              <img src="images/sample-tire.jpg" width="1600" height="1067" alt="Sample photo: a worn tire and screwdriver on a garage floor">
+              <img src="images/sample-tire.jpg" width="1600" height="1067" alt="Sample photo: a worn tire and screwdriver on a garage floor" loading="lazy">
               <span class="sample-tag">Sample photo</span>
             </figure>
           </li>
           <li>
             <!-- PHOTO SWAP: images/photo-engine.jpg (or a shop sign / storefront shot) -->
             <figure class="shot">
-              <img src="images/sample-engine.jpg" width="1600" height="1440" alt="Sample photo: an engine bay during service">
+              <img src="images/sample-engine.jpg" width="1600" height="1440" alt="Sample photo: an engine bay during service" loading="lazy">
               <span class="sample-tag">Sample photo</span>
             </figure>
           </li>
@@ -212,40 +237,60 @@
       </div>
     </section>
 
-    <section class="contact-bar" id="contact">
-      <div class="wrap contact-grid">
-        <div>
-          <h2>Call us</h2>
-          <p><a class="contact-phone" href="tel:+16077483522">(607) 748-3522</a></p>
+    <!-- VISIT + HOURS -->
+    <section class="visit" id="visit" aria-labelledby="visit-title">
+      <div class="wrap visit-grid">
+        <div class="visit-card">
+          <p class="kicker">Find us</p>
+          <h2 id="visit-title">Visit the shop</h2>
+          <p class="visit-addr">3101 Watson Blvd<br>Endwell, NY 13760</p>
+          <p class="visit-phone"><a href="tel:+16077483522">(607) 748-3522</a></p>
+          <div class="hero-actions">
+            <a class="btn btn-accent" href="tel:+16077483522">Call now</a>
+            <a class="btn btn-dark" href="https://www.google.com/maps/dir/?api=1&destination=Endwell+Auto+Service,+3101+Watson+Blvd,+Endwell,+NY+13760" target="_blank" rel="noopener noreferrer">Get directions</a>
+          </div>
+
+          <!-- EDIT-HOURS: change hours in this block only. Also update the comment at the top of this file. -->
+          <div id="hours" class="hours">
+            <h3>Opening hours</h3>
+            <p class="hours-status"><span class="ph">Hours unconfirmed</span> Google listing shows Friday closed — please confirm.</p>
+            <dl class="hours-list">
+              <div>
+                <dt>Monday – Thursday</dt>
+                <dd>7:00 AM – 5:30 PM</dd>
+              </div>
+              <div class="closed">
+                <dt>Friday</dt>
+                <dd>Closed</dd>
+              </div>
+              <div class="closed">
+                <dt>Saturday</dt>
+                <dd>Closed</dd>
+              </div>
+              <div class="closed">
+                <dt>Sunday</dt>
+                <dd>Closed</dd>
+              </div>
+            </dl>
+          </div>
         </div>
-        <div>
-          <h2>Find us</h2>
-          <p>3101 Watson Blvd<br>Endwell, NY 13760</p>
-          <p><a class="contact-dir" href="https://www.google.com/maps/dir/?api=1&destination=Endwell+Auto+Service,+3101+Watson+Blvd,+Endwell,+NY+13760" target="_blank" rel="noopener noreferrer">Get directions</a></p>
+        <div class="map-wrap">
+          <iframe
+            class="map"
+            title="Map of Endwell Auto Service at 3101 Watson Blvd, Endwell, NY"
+            src="https://www.google.com/maps?q=Endwell+Auto+Service,+3101+Watson+Blvd,+Endwell,+NY+13760&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            allowfullscreen></iframe>
         </div>
-        <!-- EDIT-HOURS: change hours in this block only. Also update the comment at the top of this file. -->
-        <div id="hours">
-          <h2>Opening hours</h2>
-          <p class="hours-status"><span class="ph">Hours unconfirmed</span> Google listing shows Friday closed — please confirm.</p>
-          <dl class="hours-list">
-            <div>
-              <dt>Monday – Thursday</dt>
-              <dd>7:00 AM – 5:30 PM</dd>
-            </div>
-            <div>
-              <dt>Friday</dt>
-              <dd>Closed</dd>
-            </div>
-            <div>
-              <dt>Saturday</dt>
-              <dd>Closed</dd>
-            </div>
-            <div>
-              <dt>Sunday</dt>
-              <dd>Closed</dd>
-            </div>
-          </dl>
-        </div>
+      </div>
+    </section>
+
+    <!-- CLOSING CTA -->
+    <section class="cta-band" aria-label="Call the shop">
+      <div class="wrap cta-inner">
+        <p class="cta-line">Car trouble or inspection due?</p>
+        <a class="btn btn-accent btn-lg" href="tel:+16077483522">Call (607) 748-3522</a>
       </div>
     </section>
 
@@ -260,15 +305,15 @@
         <p class="draft-note">Draft mockup — not a live site. Content pending owner review.</p>
       </div>
       <div>
-        <p class="footer-label">Our services</p>
+        <p class="footer-label">Services</p>
         <ul class="footer-services">
           <li>Auto Repair</li>
-          <li>Oil Changes &amp; Tires <span class="ph">confirm</span></li>
           <li>NYS State Inspections</li>
+          <li>Oil Changes &amp; Tires <span class="ph">confirm</span></li>
         </ul>
       </div>
       <div>
-        <p class="footer-label">Visit us</p>
+        <p class="footer-label">Visit</p>
         <p>3101 Watson Blvd<br>Endwell, NY 13760</p>
         <p><a href="https://www.google.com/maps/dir/?api=1&destination=Endwell+Auto+Service,+3101+Watson+Blvd,+Endwell,+NY+13760" target="_blank" rel="noopener noreferrer">Get directions</a></p>
       </div>
@@ -276,8 +321,12 @@
     <p class="footer-credit">Powered by ResProd</p>
   </footer>
 
-  <div class="call-bar" role="region" aria-label="Call the shop">
-    <a class="btn btn-accent call-bar-btn" href="tel:+16077483522">Call Now · (607) 748-3522</a>
+  <div class="call-bar" role="region" aria-label="Call or get directions">
+    <a class="btn btn-accent" href="tel:+16077483522">
+      <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg>
+      Call now
+    </a>
+    <a class="btn btn-dark" href="https://www.google.com/maps/dir/?api=1&destination=Endwell+Auto+Service,+3101+Watson+Blvd,+Endwell,+NY+13760" target="_blank" rel="noopener noreferrer">Directions</a>
   </div>
 
 </body>
