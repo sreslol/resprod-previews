@@ -44,6 +44,23 @@
         <a href="#reviews">Reviews</a>
       </nav>
       <a class="btn btn-call header-call" href="tel:+16077943121">Call</a>
+      <button type="button" class="menu-toggle" id="menu-toggle"
+              aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+        <span class="menu-toggle-bars" aria-hidden="true">
+          <span></span><span></span><span></span>
+        </span>
+      </button>
+    </div>
+    <div class="mobile-menu" id="mobile-menu" hidden>
+      <nav class="mobile-nav" aria-label="Mobile">
+        <a href="#services">Services</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#cuts">Cuts</a>
+        <a href="#hours">Hours</a>
+        <a href="#visit">Visit</a>
+        <a href="#reviews">Reviews</a>
+        <a class="btn btn-call mobile-nav-call" href="tel:+16077943121">Call</a>
+      </nav>
     </div>
   </header>
 
@@ -445,6 +462,57 @@
       } else {
         setupReviewClamps();
       }
+    })();
+
+    (function () {
+      var toggle = document.getElementById("menu-toggle");
+      var menu = document.getElementById("mobile-menu");
+      if (!toggle || !menu) return;
+
+      var desktop = window.matchMedia("(min-width: 900px)");
+
+      function isOpen() {
+        return toggle.getAttribute("aria-expanded") === "true";
+      }
+
+      function setOpen(open) {
+        toggle.setAttribute("aria-expanded", open ? "true" : "false");
+        toggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+        document.body.classList.toggle("is-menu-open", open);
+        if (open) menu.removeAttribute("hidden");
+        else menu.setAttribute("hidden", "");
+      }
+
+      function closeMenu(returnFocus) {
+        if (!isOpen()) return;
+        setOpen(false);
+        if (returnFocus) toggle.focus();
+      }
+
+      toggle.addEventListener("click", function (e) {
+        e.stopPropagation();
+        setOpen(!isOpen());
+      });
+
+      menu.addEventListener("click", function (e) {
+        if (e.target.closest("a")) closeMenu(false);
+      });
+
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape") closeMenu(true);
+      });
+
+      document.addEventListener("pointerdown", function (e) {
+        if (!isOpen()) return;
+        if (menu.contains(e.target) || toggle.contains(e.target)) return;
+        closeMenu(false);
+      });
+
+      function onDesktopChange() {
+        if (desktop.matches) closeMenu(false);
+      }
+      if (desktop.addEventListener) desktop.addEventListener("change", onDesktopChange);
+      else if (desktop.addListener) desktop.addListener(onDesktopChange);
     })();
   </script>
 </body>
