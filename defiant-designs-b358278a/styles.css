@@ -16,6 +16,7 @@
   --wood: #8a5a3a;
   --max: 68rem;
   --header-h: 4rem;
+  --draft-h: 2.15rem;
   --radius: 0.4rem;
   --font-body: "Source Sans 3", "Segoe UI", sans-serif;
   --font-display: "Oswald", "Arial Narrow", sans-serif;
@@ -30,7 +31,7 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 4.5rem;
+  scroll-padding-top: calc(var(--draft-h) + var(--header-h) + 0.5rem);
 }
 
 body {
@@ -93,6 +94,26 @@ a:hover {
   top: 0.6rem;
 }
 
+.draft-bar {
+  position: sticky;
+  top: 0;
+  z-index: 60;
+  margin: 0;
+  padding: 0.4rem 1rem;
+  min-height: var(--draft-h);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: var(--font-display);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #cbbfc4;
+  background: #161214;
+  border-bottom: 1px solid var(--line);
+}
+
 .wrap {
   width: min(100% - 2rem, var(--max));
   margin-inline: auto;
@@ -106,7 +127,7 @@ a:hover {
 
 .site-header {
   position: sticky;
-  top: 0;
+  top: var(--draft-h);
   z-index: 50;
   background: rgba(13, 11, 12, 0.92);
   border-bottom: 1px solid var(--line);
@@ -200,7 +221,7 @@ a:hover {
 .site-nav {
   display: none;
   position: absolute;
-  top: calc(var(--header-h) + 1px);
+  top: 100%;
   left: 0;
   right: 0;
   background: var(--bg-2);
@@ -291,7 +312,7 @@ a:hover {
 
 .hero {
   position: relative;
-  min-height: min(92svh, 44rem);
+  min-height: min(78svh, 38rem);
   display: grid;
   align-items: end;
   overflow: hidden;
@@ -303,15 +324,15 @@ a:hover {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: 72% 40%;
+  object-position: 50% 82%;
 }
 
 .hero-shade {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(180deg, rgba(13, 11, 12, 0.28) 0%, rgba(13, 11, 12, 0.2) 32%, rgba(13, 11, 12, 0.88) 100%),
-    linear-gradient(90deg, rgba(13, 11, 12, 0.55), transparent 55%);
+    linear-gradient(180deg, rgba(13, 11, 12, 0.35) 0%, rgba(13, 11, 12, 0.15) 28%, rgba(13, 11, 12, 0.82) 100%),
+    linear-gradient(90deg, rgba(13, 11, 12, 0.55), transparent 58%);
 }
 
 .hero-content {
@@ -498,6 +519,32 @@ h3 {
   object-position: center 30%;
 }
 
+.fb-tile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  text-decoration: none;
+  aspect-ratio: 1;
+  padding: 1rem;
+  color: var(--text);
+  background: var(--panel);
+  border: 1px solid var(--line);
+}
+
+.fb-tile span {
+  font-family: var(--font-display);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  color: #e8dfe0;
+}
+
+.fb-tile:hover {
+  color: #fff;
+  border-color: var(--purple);
+}
+
 .portfolio-item figcaption {
   padding: 0.55rem 0.7rem 0.75rem;
   font-size: 0.88rem;
@@ -538,12 +585,6 @@ h3 {
   object-position: center;
 }
 
-.studio-grid figcaption {
-  padding: 0.65rem 0.85rem 0.8rem;
-  font-size: 0.92rem;
-  color: var(--muted);
-}
-
 /* Artists */
 
 .artist-photo {
@@ -563,6 +604,15 @@ h3 {
   letter-spacing: 0.1em;
   text-transform: uppercase;
   font-size: 0.75rem;
+}
+
+.artists-grid {
+  grid-template-columns: 1fr 1fr;
+  align-items: start;
+}
+
+.artist-card p:last-child {
+  margin-bottom: 0;
 }
 
 .role {
@@ -808,6 +858,10 @@ h3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
+  .artists-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
   .contact-grid {
     grid-template-columns: 1fr 1.3fr;
     align-items: start;
@@ -819,6 +873,14 @@ h3 {
 }
 
 @media (min-width: 900px) {
+  .hero {
+    min-height: min(92svh, 44rem);
+  }
+
+  .hero-photo {
+    object-position: 50% 70%;
+  }
+
   .nav-toggle {
     display: none;
   }
