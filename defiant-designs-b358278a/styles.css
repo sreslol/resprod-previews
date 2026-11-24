@@ -17,6 +17,7 @@
   --max: 68rem;
   --header-h: 4rem;
   --draft-h: 2.15rem;
+  --hero-frame-max: 1116px; /* native width of images/studio-lounge.jpg */
   --radius: 0.4rem;
   --font-body: "Source Sans 3", "Segoe UI", sans-serif;
   --font-display: "Oswald", "Arial Narrow", sans-serif;
@@ -946,6 +947,21 @@ h3 {
 
   .section {
     padding: 4.2rem 0;
+  }
+}
+
+/* Above the photo's native width, keep the hero at 1x and frame it
+   on the site background. Header and draft bar stay full-bleed. */
+@media (min-width: 1117px) {
+  .hero {
+    width: var(--hero-frame-max);
+    max-width: var(--hero-frame-max);
+    margin-inline: auto;
+    overflow: visible;
+    border: 1px solid var(--line);
+    box-shadow:
+      0 0 0 1px rgba(179, 24, 30, 0.22),
+      0 18px 42px rgba(0, 0, 0, 0.55);
   }
 }
 
