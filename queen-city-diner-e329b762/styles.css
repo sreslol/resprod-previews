@@ -345,7 +345,7 @@ a{color:var(--maroon)}
   object-fit:cover;
   object-position:50% 50%;
 }
-.photo-tile:first-child img{object-position:50% 28%}
+.photo-tile:first-child img{object-position:50% 55%}
 .photo-tile figcaption{
   position:absolute;
   left:0;
