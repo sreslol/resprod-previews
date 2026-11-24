@@ -29,18 +29,22 @@
   <main id="main">
     <section class="hero" id="top">
       <div class="stripes" aria-hidden="true"></div>
-      <div class="hero-inner">
-        <img class="hero-logo" src="images/logo.svg" width="280" height="280" alt="The Village Diner">
-        <p class="hero-tag">Breakfast &amp; lunch in Johnson City</p>
-        <p class="hero-addr">255 Floral Ave, Johnson City, NY 13790</p>
-        <a class="btn btn-call" href="tel:+16072174134">Call (607) 217-4134</a>
-        <p class="hero-links">
-          <a href="#menu">See the menu</a>
-        </p>
+      <div class="hero-stage">
+        <picture class="hero-bg">
+          <source media="(max-width: 699px)" srcset="images/hero-storefront-sm.jpg">
+          <img src="images/hero-storefront.jpg" width="1600" height="1166" alt="The Village Diner storefront on Floral Ave, with red window lettering and a red awning.">
+        </picture>
+        <div class="hero-overlay" aria-hidden="true"></div>
+        <div class="hero-inner wrap">
+          <img class="hero-logo" src="images/logo.svg" width="280" height="280" alt="The Village Diner">
+          <p class="hero-tag">Breakfast &amp; lunch in Johnson City</p>
+          <p class="hero-addr">255 Floral Ave, Johnson City, NY 13790</p>
+          <a class="btn btn-call" href="tel:+16072174134">Call (607) 217-4134</a>
+          <p class="hero-links">
+            <a href="#menu">See the menu</a>
+          </p>
+        </div>
       </div>
-      <figure class="hero-photo">
-        <img src="images/french-toast.jpg" width="1600" height="1204" alt="House-made blueberry and pecan French toast with whipped cream.">
-      </figure>
     </section>
 
     <a class="fb-callout" href="https://www.facebook.com/thevillagedinerjc/" rel="noopener noreferrer">
@@ -51,13 +55,29 @@
       </span>
     </a>
 
+    <section class="section intro" id="intro">
+      <div class="wrap intro-copy">
+        <h2 class="section-title">Welcome</h2>
+        <p>We're a hometown diner on Floral Ave in Johnson City, serving breakfast and lunch for dine-in and pickup.</p>
+        <p>Stop in for a friendly meal, and check our Facebook for the day's specials. Google reviewers have rated us 4.7 stars from 784 reviews.</p>
+      </div>
+    </section>
+
+    <div class="checker" aria-hidden="true"></div>
+
     <section class="section" id="menu">
       <div class="wrap">
         <h1 class="section-title">Menu</h1>
-
-        <div class="menu-grid">
-          <div>
-            <h2>Breakfast</h2>
+        <div class="menu-tabs" role="tablist" aria-label="Breakfast or lunch">
+          <button type="button" class="menu-tab" role="tab" id="tab-breakfast" aria-controls="menu-breakfast" aria-selected="true" tabindex="0">Breakfast</button>
+          <button type="button" class="menu-tab" role="tab" id="tab-lunch" aria-controls="menu-lunch" aria-selected="false" tabindex="-1">Lunch</button>
+        </div>
+        <div class="menu-boards">
+          <article class="menu-panel menu-panel-breakfast is-active" id="menu-breakfast" role="tabpanel" aria-labelledby="tab-breakfast">
+            <header class="menu-sign">
+              <svg class="menu-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="36" height="36" aria-hidden="true" focusable="false"><path fill="currentColor" d="M16 6c1.2 2.4 1.2 4.8 0 7.2h-3.2C14 10.8 14 8.4 12.8 6H16zm9 0c1.2 2.4 1.2 4.8 0 7.2h-3.2C23 10.8 23 8.4 21.8 6H25zM8 16h26v13.5c0 5.25-4.25 9.5-9.5 9.5h-7C12.25 39 8 34.75 8 29.5V16zm26 2.2h4.2A5.3 5.3 0 0 1 43.5 23.5a5.3 5.3 0 0 1-5.3 5.3H34V18.2zM11 42h22v3H11z"/></svg>
+              <h2>Breakfast</h2>
+            </header>
             <ul class="menu-list">
               <li>
                 <div class="item-row"><span class="item-name">2 Eggs, Homefries, Toast &amp; Jelly</span></div>
@@ -99,10 +119,13 @@
                 <p class="item-desc">Scrambled eggs, melted cheese, and bacon, sausage, or ham on thick-cut French toast.</p>
               </li>
             </ul>
-          </div>
+          </article>
 
-          <div>
-            <h2>Lunch</h2>
+          <article class="menu-panel menu-panel-lunch" id="menu-lunch" role="tabpanel" aria-labelledby="tab-lunch">
+            <header class="menu-sign">
+              <svg class="menu-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="36" height="36" aria-hidden="true" focusable="false"><path fill="currentColor" d="M8 20c0-8.2 7.2-15 16-15s16 6.8 16 15H8z"/><circle fill="#16161b" cx="16" cy="11" r="1.3"/><circle fill="#16161b" cx="24" cy="8.5" r="1.3"/><circle fill="#16161b" cx="32" cy="11" r="1.3"/><path fill="currentColor" d="M6 23.2h36v5.2H6z"/><path fill="currentColor" d="M7 30.5h34c.5 5-3.8 9.8-9.4 9.8H16.4c-5.6 0-9.9-4.8-9.4-9.8z"/></svg>
+              <h2>Lunch</h2>
+            </header>
             <ul class="menu-list">
               <li>
                 <div class="item-row"><span class="item-name">Fish Tacos (3)</span></div>
@@ -133,13 +156,12 @@
                 <p class="item-desc">Iceberg and baby spinach, peppers, onions, tomatoes, shredded cheddar, and croutons.</p>
               </li>
             </ul>
-          </div>
+          </article>
         </div>
       </div>
     </section>
 
-
-    <div class="stripes" aria-hidden="true"></div>
+    <div class="checker" aria-hidden="true"></div>
 
     <section class="section section-alt" id="hours">
       <div class="wrap hours-wrap">
@@ -167,6 +189,8 @@
         </figure>
       </div>
     </section>
+
+    <div class="checker" aria-hidden="true"></div>
 
     <section class="section" id="photos">
       <div class="wrap">
@@ -206,7 +230,7 @@
       </div>
     </section>
 
-    <div class="stripes" aria-hidden="true"></div>
+    <div class="checker" aria-hidden="true"></div>
 
     <section class="section section-alt" id="contact">
       <div class="wrap contact-wrap">
@@ -217,6 +241,10 @@
             255 Floral Ave<br>
             Johnson City, NY 13790
           </p>
+          <figure class="corner-photo">
+            <img src="images/corner-floral-hudson.jpg" width="1600" height="1200" alt="Green street signs at the corner of Floral Ave and Hudson St.">
+            <figcaption>Find us on the corner of Floral Ave &amp; Hudson St.</figcaption>
+          </figure>
           <p>
             <a class="btn btn-call" href="tel:+16072174134">Call (607) 217-4134</a>
           </p>
@@ -255,5 +283,55 @@
   </footer>
 
   <a class="sticky-call" href="tel:+16072174134">Call (607) 217-4134</a>
+
+  <script>
+    (function () {
+      var tabs = document.querySelectorAll(".menu-tab");
+      var boards = document.querySelector(".menu-boards");
+      if (!tabs.length || !boards) return;
+      document.documentElement.classList.add("js");
+
+      var mq = window.matchMedia("(max-width: 699px)");
+
+      function selectTab(id) {
+        tabs.forEach(function (tab) {
+          var on = tab.getAttribute("aria-controls") === id;
+          tab.setAttribute("aria-selected", on ? "true" : "false");
+          tab.tabIndex = on ? 0 : -1;
+        });
+        boards.querySelectorAll(".menu-panel").forEach(function (panel) {
+          var on = panel.id === id;
+          panel.classList.toggle("is-active", on);
+        });
+      }
+
+      function syncMode() {
+        if (mq.matches) boards.classList.add("is-tabbed");
+        else boards.classList.remove("is-tabbed");
+      }
+
+      tabs.forEach(function (tab) {
+        tab.addEventListener("click", function () {
+          selectTab(tab.getAttribute("aria-controls"));
+        });
+        tab.addEventListener("keydown", function (e) {
+          var i = Array.prototype.indexOf.call(tabs, tab);
+          var next;
+          if (e.key === "ArrowLeft" || e.key === "ArrowUp") next = (i - 1 + tabs.length) % tabs.length;
+          else if (e.key === "ArrowRight" || e.key === "ArrowDown") next = (i + 1) % tabs.length;
+          else if (e.key === "Home") next = 0;
+          else if (e.key === "End") next = tabs.length - 1;
+          else return;
+          e.preventDefault();
+          tabs[next].focus();
+          selectTab(tabs[next].getAttribute("aria-controls"));
+        });
+      });
+
+      if (mq.addEventListener) mq.addEventListener("change", syncMode);
+      else if (mq.addListener) mq.addListener(syncMode);
+      syncMode();
+    })();
+  </script>
 </body>
 </html>
