@@ -125,7 +125,7 @@ address { font-style: normal; }
 }
 .header-inner { display: flex; align-items: center; gap: 1rem; min-height: 4rem; }
 .brand { display: flex; align-items: center; gap: 0.6rem; text-decoration: none; color: var(--cream); margin-right: auto; }
-.brand-mark { width: auto; height: 2.35rem; color: var(--gold); }
+.brand-mark { width: auto; height: 2.9rem; color: var(--gold); }
 .brand-text { display: flex; flex-direction: column; align-items: flex-start; line-height: 1; }
 .brand-name {
   font-family: var(--display); font-weight: 700; font-size: 1.35rem; letter-spacing: 0.12em;
@@ -436,7 +436,7 @@ address { font-style: normal; }
   .nav { display: flex; }
   .menu-toggle, .mobile-menu { display: none !important; }
   .header-inner { min-height: 4.75rem; }
-  .brand-mark { height: 2.7rem; }
+  .brand-mark { height: 3.2rem; }
   .brand-name { font-size: 1.55rem; }
   .header-call { margin-left: 0.5rem; }
   .section { padding: 6.25rem 0; }
