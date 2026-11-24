@@ -274,29 +274,8 @@ a:hover {
   color: var(--black);
 }
 
-.lead {
-  margin: -0.3rem 0 1.25rem;
-  color: var(--muted);
-  max-width: 40rem;
-}
 
-.notice {
-  background: #f8e6c8;
-  border-left: 4px solid var(--red);
-  padding: 0.8rem 1rem;
-  margin: 0 0 1.5rem;
-  color: #3a342e;
-}
 
-.tbc {
-  display: inline-block;
-  font-size: 0.75rem;
-  font-style: italic;
-  font-weight: 400;
-  letter-spacing: 0.02em;
-  color: var(--muted);
-  text-transform: none;
-}
 
 /* Menu */
 .menu-grid {
@@ -336,18 +315,7 @@ a:hover {
   font-weight: 600;
 }
 
-.item-price {
-  white-space: nowrap;
-  font-variant-numeric: tabular-nums;
-  color: var(--black);
-}
 
-.item-price em {
-  font-style: italic;
-  font-weight: 400;
-  color: var(--muted);
-  font-size: 0.75rem;
-}
 
 .item-desc {
   margin: 0.2rem 0 0;
@@ -355,11 +323,6 @@ a:hover {
   font-size: 0.95rem;
 }
 
-.menu-foot {
-  margin: 1.1rem 0 0;
-  color: var(--muted);
-  font-size: 0.95rem;
-}
 
 /* Hours */
 .hours-wrap {
@@ -385,11 +348,6 @@ a:hover {
   width: 40%;
 }
 
-.fine-print {
-  color: var(--muted);
-  font-size: 0.92rem;
-  margin: 0.9rem 0 0;
-}
 
 .hours-photo img {
   width: 100%;
@@ -610,11 +568,6 @@ a:hover {
   color: var(--cream);
 }
 
-.specials .notice {
-  background: #2a2a31;
-  border-left-color: var(--red);
-  color: #e8ddd0;
-}
 
 .specials-grid {
   display: grid;
