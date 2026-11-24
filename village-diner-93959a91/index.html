@@ -56,10 +56,16 @@
     </a>
 
     <section class="section intro" id="intro">
-      <div class="wrap intro-copy">
-        <h2 class="section-title">Welcome</h2>
-        <p>We're a hometown diner on Floral Ave in Johnson City, serving breakfast and lunch for dine-in and pickup.</p>
-        <p>Stop in for a friendly meal, and check our Facebook for the day's specials. Google reviewers have rated us 4.7 stars from 784 reviews.</p>
+      <div class="wrap intro-grid">
+        <div class="intro-copy">
+          <h2 class="section-title">Welcome</h2>
+          <p>We're a hometown diner on Floral Ave in Johnson City, serving breakfast and lunch for dine-in and pickup.</p>
+          <p>Stop in for a friendly meal, and check our Facebook for the day's specials. Google reviewers have rated us 4.7 stars from 784 reviews.</p>
+        </div>
+        <figure class="intro-map">
+          <img src="images/interior-jc-map.jpg" width="1600" height="1119" alt="A framed illustrated map of Johnson City hanging on the diner wall.">
+          <figcaption>Hometown on the walls.</figcaption>
+        </figure>
       </div>
     </section>
 
@@ -68,9 +74,10 @@
     <section class="section" id="menu">
       <div class="wrap">
         <h1 class="section-title">Menu</h1>
-        <div class="menu-tabs" role="tablist" aria-label="Breakfast or lunch">
+        <div class="menu-tabs" role="tablist" aria-label="Breakfast, lunch, or desserts">
           <button type="button" class="menu-tab" role="tab" id="tab-breakfast" aria-controls="menu-breakfast" aria-selected="true" tabindex="0">Breakfast</button>
           <button type="button" class="menu-tab" role="tab" id="tab-lunch" aria-controls="menu-lunch" aria-selected="false" tabindex="-1">Lunch</button>
+          <button type="button" class="menu-tab" role="tab" id="tab-desserts" aria-controls="menu-desserts" aria-selected="false" tabindex="-1">Desserts</button>
         </div>
         <div class="menu-boards">
           <article class="menu-panel menu-panel-breakfast is-active" id="menu-breakfast" role="tabpanel" aria-labelledby="tab-breakfast">
@@ -156,6 +163,39 @@
                 <p class="item-desc">Iceberg and baby spinach, peppers, onions, tomatoes, shredded cheddar, and croutons.</p>
               </li>
             </ul>
+          </article>
+
+          <article class="menu-panel menu-panel-desserts" id="menu-desserts" role="tabpanel" aria-labelledby="tab-desserts">
+            <header class="menu-sign">
+              <svg class="menu-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="36" height="36" aria-hidden="true" focusable="false"><path fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" d="M16 26C16 14 24 8 24 4"/><path fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" d="M32 25C32 14 24 8 24 4"/><circle fill="currentColor" cx="16" cy="34" r="9"/><circle fill="currentColor" cx="32" cy="33" r="9"/></svg>
+              <h2>Desserts</h2>
+            </header>
+            <div class="desserts-body">
+              <figure class="desserts-photo">
+                <img src="images/dessert-board.jpg" width="704" height="1600" alt="The Village Diner desserts chalkboard.">
+              </figure>
+              <div class="desserts-list">
+                <ul class="menu-list">
+                  <li>
+                    <div class="item-row"><span class="item-name">Bananas Foster</span><span class="item-price">$6.95</span></div>
+                    <p class="item-desc">3 scoops of vanilla ice cream, drizzled in our homemade caramel sauce, fresh bananas, whipped cream &amp; a cherry on top!</p>
+                  </li>
+                  <li>
+                    <div class="item-row"><span class="item-name">Warm Brownie Sundae</span><span class="item-price">$6.95</span></div>
+                    <p class="item-desc">A warm house-baked fudge brownie smothered in vanilla ice cream, whipped cream &amp; chocolate drizzle.</p>
+                  </li>
+                  <li>
+                    <div class="item-row"><span class="item-name">Strawberry Shortcake</span><span class="item-price">$5.95</span></div>
+                    <p class="item-desc">Candied strawberries over a homemade biscuit, whipped cream and a cherry on top!</p>
+                  </li>
+                  <li>
+                    <div class="item-row"><span class="item-name">2-Scoop Sundae</span><span class="item-price">$4.95</span></div>
+                    <p class="item-desc">Choice of chocolate, caramel, or strawberry.</p>
+                  </li>
+                </ul>
+                <p class="desserts-note">Desserts change often, so check our <a href="https://www.facebook.com/thevillagedinerjc/" rel="noopener noreferrer">Facebook</a> for today's sweets and daily specials.</p>
+              </div>
+            </div>
           </article>
         </div>
       </div>
@@ -331,6 +371,15 @@
       if (mq.addEventListener) mq.addEventListener("change", syncMode);
       else if (mq.addListener) mq.addListener(syncMode);
       syncMode();
+
+      var initial = (location.hash || "").replace("#", "");
+      try {
+        var q = new URLSearchParams(location.search).get("panel");
+        if (q) initial = q;
+      } catch (e) {}
+      if (initial === "menu-breakfast" || initial === "menu-lunch" || initial === "menu-desserts") {
+        selectTab(initial);
+      }
     })();
   </script>
 </body>

@@ -409,10 +409,14 @@ a:hover {
     var(--cream);
 }
 
+.intro-grid {
+  display: grid;
+  gap: 1.5rem;
+  align-items: center;
+}
+
 .intro-copy {
   max-width: 42rem;
-  margin-inline: auto;
-  text-align: center;
 }
 
 .intro-copy p {
@@ -422,6 +426,23 @@ a:hover {
 
 .intro-copy p:last-child {
   margin-bottom: 0;
+}
+
+.intro-map {
+  margin: 0;
+}
+
+.intro-map img {
+  width: 100%;
+  border: 3px solid var(--red);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+  background: var(--white);
+}
+
+.intro-map figcaption {
+  margin: 0.5rem 0 0;
+  font-weight: 600;
+  text-align: center;
 }
 
 /* Menu — two distinct boards */
@@ -535,6 +556,71 @@ a:hover {
 
 .menu-panel-lunch .item-desc {
   color: #c9c1b5;
+}
+
+.menu-panel-desserts {
+  background: #1a2218;
+  color: #f3ecd4;
+  border: 7px solid #b8894a;
+  box-shadow:
+    inset 0 0 0 3px #6e4a22,
+    0 10px 22px rgba(0, 0, 0, 0.16);
+}
+
+.menu-panel-desserts .menu-sign {
+  color: #f3ecd4;
+  background: #141a12;
+  border-bottom: 1px solid rgba(243, 236, 212, 0.18);
+}
+
+.desserts-body {
+  display: grid;
+  gap: 1rem;
+  padding: 0.85rem 1rem 0.5rem;
+}
+
+.desserts-photo {
+  margin: 0;
+}
+
+.desserts-photo img {
+  width: 100%;
+  height: auto;
+  max-height: 22rem;
+  object-fit: contain;
+  object-position: center top;
+  border: 2px solid #6e4a22;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  background: #141a12;
+}
+
+.menu-panel-desserts .menu-list {
+  padding: 0;
+}
+
+.menu-panel-desserts .menu-list li {
+  border-bottom-color: rgba(243, 236, 212, 0.2);
+}
+
+.menu-panel-desserts .item-desc {
+  color: #d5ccb4;
+}
+
+.menu-panel-desserts .item-price {
+  font-weight: 700;
+  white-space: nowrap;
+  color: #f0e27a;
+}
+
+.desserts-note {
+  margin: 0.9rem 0 0.7rem;
+  color: #e8e0c8;
+  font-size: 1rem;
+}
+
+.desserts-note a {
+  color: #f3d27a;
+  font-weight: 600;
 }
 
 .menu-list {
@@ -797,6 +883,12 @@ a:hover {
     flex: 1 1 auto;
   }
 
+  .intro-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+    align-items: center;
+  }
+
   .menu-boards {
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
@@ -811,6 +903,23 @@ a:hover {
 
   .menu-panel .menu-list {
     flex: 1;
+  }
+
+  .menu-panel-desserts {
+    grid-column: 1 / -1;
+  }
+
+  .desserts-body {
+    grid-template-columns: minmax(240px, 0.8fr) 1.2fr;
+    gap: 1.5rem;
+    align-items: start;
+    padding: 1rem 1.15rem 1rem;
+  }
+
+  .desserts-photo img {
+    max-height: 36rem;
+    object-fit: contain;
+    background: #141a12;
   }
 
   .hours-wrap,
@@ -879,6 +988,12 @@ a:hover {
 @media (max-width: 699px) {
   .js .menu-tabs {
     display: flex;
+  }
+
+  .menu-tab {
+    font-size: 0.72rem;
+    letter-spacing: 0.05em;
+    padding: 0.3rem 0.2rem;
   }
 
   .js .menu-boards.is-tabbed .menu-panel:not(.is-active) {
