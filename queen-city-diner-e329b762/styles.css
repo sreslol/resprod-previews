@@ -319,7 +319,8 @@ a{color:var(--maroon)}
 
 /* hours */
 .hours{background:var(--cream)}
-.hours-note{margin:0 0 16px;color:var(--muted);font-size:15px}
+.hours-box{max-width:100%}
+.confirm-tag{margin:0 0 14px;text-align:center}
 .hours-table{width:100%;border-collapse:collapse}
 .hours-table th,
 .hours-table td{padding:9px 4px;border-bottom:1px solid #eadfae;text-align:left}
