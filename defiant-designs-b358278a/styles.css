@@ -303,9 +303,22 @@ a:hover {
 }
 
 .btn-small {
-  min-height: 2.4rem;
-  padding-inline: 0.85rem;
+  min-height: 2.5rem;
+  padding: 0.5rem 1rem;
   font-size: 0.8rem;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.site-nav a.btn,
+.site-nav .btn-small {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1.15rem;
+  line-height: 1.2;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 /* Hero */
@@ -341,13 +354,6 @@ a:hover {
   width: min(100% - 2rem, var(--max));
   margin: 0 auto;
   padding: 6rem 0 2.4rem;
-}
-
-.hero-logo {
-  width: min(15rem, 70vw);
-  height: auto;
-  filter: drop-shadow(0 8px 18px rgba(0, 0, 0, 0.55));
-  margin-bottom: 0.6rem;
 }
 
 .eyebrow {
@@ -897,11 +903,13 @@ h3 {
 
 @media (min-width: 900px) {
   .hero {
-    min-height: min(92svh, 44rem);
+    /* Fit the remaining viewport below the sticky draft bar + header,
+       so the lounge crop and hero actions stay on-screen at short laptop heights. */
+    min-height: min(calc(100svh - var(--draft-h) - var(--header-h)), 44rem);
   }
 
   .hero-photo {
-    object-position: 50% 70%;
+    object-position: 50% 42%;
   }
 
   .nav-toggle {
