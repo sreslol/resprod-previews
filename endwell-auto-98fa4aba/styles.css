@@ -267,8 +267,6 @@ p { margin: 0 0 1rem; }
 .footer-grid { display: grid; gap: 1.75rem; }
 .footer-name { color: var(--white); font-weight: 800; font-size: 1.1rem; }
 .footer-label { color: var(--white); font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; font-size: 0.78rem; }
-.footer-services { list-style: none; margin: 0; padding: 0; }
-.footer-services li { padding: 0.15rem 0; }
 .draft-note { font-size: 0.8rem; color: #7f8c99; }
 .footer-credit {
   margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.08);
@@ -312,7 +310,8 @@ p { margin: 0 0 1rem; }
   .photo-grid .shot, .photo-grid .photo-wide .shot { aspect-ratio: auto; height: 22rem; }
   .visit-grid { grid-template-columns: 1fr 1.2fr; align-items: stretch; }
   .visit-card { padding: 2.25rem; }
-  .footer-grid { grid-template-columns: 1.3fr 1fr 1fr; gap: 2rem; }
+  .footer-grid { grid-template-columns: 1fr auto; gap: 3rem; align-items: start; }
+  .footer-grid > div:last-child { min-width: 14rem; }
 }
 
 @media (prefers-reduced-motion: reduce) {
