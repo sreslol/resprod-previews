@@ -267,7 +267,6 @@ p { margin: 0 0 1rem; }
 .footer-grid { display: grid; gap: 1.75rem; }
 .footer-name { color: var(--white); font-weight: 800; font-size: 1.1rem; }
 .footer-label { color: var(--white); font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; font-size: 0.78rem; }
-.draft-note { font-size: 0.8rem; color: #7f8c99; }
 .footer-credit {
   margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.08);
   text-align: center; font-size: 0.75rem; letter-spacing: 0.04em; color: #8a8a8a;
