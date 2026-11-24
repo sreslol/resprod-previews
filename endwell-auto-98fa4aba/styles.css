@@ -340,3 +340,19 @@ p { margin: 0 0 1rem; }
 }
 .footer-logo img { height: 3rem; width: auto; }
 .footer-tagline { font-style: italic; color: #d6dee7; margin-top: -0.6rem; }
+
+/* Services list (v6): compact icon rows */
+.services-intro { color: var(--gray); max-width: 40rem; margin: 0; }
+.card.svc { display: flex; align-items: flex-start; gap: 0.9rem; padding: 1.1rem 1.2rem; }
+.card.svc .card-ico { margin: 0; flex-shrink: 0; width: 2.75rem; height: 2.75rem; }
+.card.svc .card-ico svg { width: 1.45rem; height: 1.45rem; }
+.card.svc h3 { margin: 0.15rem 0 0.25rem; font-size: 1.05rem; }
+.card.svc p { margin: 0; font-size: 0.95rem; }
+.svc-featured { border: 2px dashed rgba(217,115,31,0.55); background: #fffaf4; }
+@media (min-width: 640px) {
+  .service-cards { grid-template-columns: repeat(2, 1fr); }
+}
+@media (min-width: 900px) {
+  .service-cards { grid-template-columns: repeat(3, 1fr); }
+  .svc-featured { grid-column: 1 / -1; }
+}
